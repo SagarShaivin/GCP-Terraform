@@ -1,0 +1,10 @@
+# Key-Creds Files
+keys/
+
+# Terraform Files
+.terraform
+.terraform*
+terraform.tfvars
+terraform.tfstate*
+provider.tf
+
