@@ -21,12 +21,12 @@ resource "google_storage_bucket" "bucket" {
 
 resource "google_storage_bucket_iam_member" "bucket_writer" {
   bucket = google_storage_bucket.bucket.name
-  role   = "roles/storage.objectCreator" 
+  role   = "roles/storage.objectCreator"
   member = var.bucket_writer_member
 }
 
 resource "google_storage_bucket_iam_member" "bucket_reader" {
   bucket = google_storage_bucket.bucket.name
-  role   = "roles/storage.objectViewer" 
+  role   = "roles/storage.objectViewer"
   member = var.bucket_reader_member
 }
