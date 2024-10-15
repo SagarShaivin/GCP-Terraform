@@ -8,14 +8,14 @@ resource "google_compute_network" "vpc" {
 #  Creating Subnets
 # ------------------------------------------------------------------------------
 
-# Public Subnet
-resource "google_compute_subnetwork" "public_subnet1" {
-  name          = "public-subnet-a"
-  network       = google_compute_network.vpc.id
-  ip_cidr_range = var.public_subnet_cidr
-  region        = var.region
-  description   = "This subnet is public subnet and containing bstion-host."
-}
+# # Public Subnet
+# resource "google_compute_subnetwork" "public_subnet1" {
+#   name          = "public-subnet-a"
+#   network       = google_compute_network.vpc.id
+#   ip_cidr_range = var.public_subnet_cidr
+#   region        = var.region
+#   description   = "This subnet is public subnet and containing bstion-host."
+# }
 
 # Private Subnet
 resource "google_compute_subnetwork" "private_subnet1" {
@@ -27,15 +27,15 @@ resource "google_compute_subnetwork" "private_subnet1" {
   private_ip_google_access = true
 }
 
-# Data Subnet
-resource "google_compute_subnetwork" "data_subnet1" {
-  name                     = "data-subnet-a"
-  network                  = google_compute_network.vpc.id
-  ip_cidr_range            = var.data_subnet_cidr
-  region                   = var.region
-  description              = "This subnet is private subnet and containing data-instance."
-  private_ip_google_access = true
-}
+# # Data Subnet
+# resource "google_compute_subnetwork" "data_subnet1" {
+#   name                     = "data-subnet-a"
+#   network                  = google_compute_network.vpc.id
+#   ip_cidr_range            = var.data_subnet_cidr
+#   region                   = var.region
+#   description              = "This subnet is private subnet and containing data-instance."
+#   private_ip_google_access = true
+# }
 
 
 # ------------------------------------------------------------------------------
